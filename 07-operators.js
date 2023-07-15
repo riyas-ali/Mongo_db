@@ -18,3 +18,9 @@ db.books.find({ rating: {$in: [7, 8, 9]} })
 
 // not in
 db.books.find({ rating: {$nin: [7, 8, 9]} })
+
+// all
+db.books.find({genres: {$all: ["fantasy", "sci-fi"]}})
+
+// in nested dictonary
+db.books.find({"reviews.name": "Peach"})
